@@ -1,0 +1,333 @@
+/* Navbar */
+.navbar {
+    position: relative;
+    background: url("https://png.pngtree.com/background/20210710/original/pngtree-travel-around-the-world-picture-image_1019959.jpg")
+        no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    z-index: 10;
+  }
+  /* Loader Overlay Styles */
+  /* Loader Overlay Styles */
+  .loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+  }
+  
+  .loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    transform: translateY(-10%); /* Small adjustment for perfect visual centering */
+  }
+  
+  .loader-content p {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+    margin: 0;
+  }
+  .navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+  
+  .menu-bars {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+    color: #000000;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-bars:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Sidebar Menu */
+  .nav-menu {
+    background: url("https://png.pngtree.com/background/20210710/original/pngtree-travel-around-the-world-picture-image_1019959.jpg")
+      no-repeat center center/cover;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    z-index: 100;
+  }
+  
+  .nav-menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+    transition: 350ms;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+    margin-top: 30px;
+  }
+  
+  .nav-text a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 550;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+    gap: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-text a:hover {
+    background-color: #1a83ff;
+    transform: translateX(5px);
+  }
+  
+  .nav-menu-items {
+    width: 100%;
+  }
+  
+  .navbar-toggle {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  span {
+    margin-left: 16px;
+  }
+  
+  /* Content */
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    padding: 20px;
+    transition: filter 0.3s ease;
+  }
+  
+  .content.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+  }
+  
+  .cards-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 60vh;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .card-image {
+    transform: scale(1.02);
+  }
+  
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 20px;
+    color: white;
+  }
+  
+  .card-info h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #ffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+  
+  .card-info p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #ffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  }
+  
+  .swipe-left {
+    transform: translateX(-100px) rotate(-10deg);
+    opacity: 0.7;
+  }
+  
+  .swipe-right {
+    transform: translateX(100px) rotate(10deg);
+    opacity: 0.7;
+  }
+  
+  .animate-left {
+    animation: swipeLeft 0.5s forwards;
+  }
+  
+  .animate-right {
+    animation: swipeRight 0.5s forwards;
+  }
+  
+  @keyframes swipeLeft {
+    0% {
+      transform: translateX(0) rotate(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-500px) rotate(-30deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes swipeRight {
+    0% {
+      transform: translateX(0) rotate(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(500px) rotate(30deg);
+      opacity: 0;
+    }
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+  .like-btn, .dislike-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .like-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .dislike-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .like-btn:hover:not(:disabled), .dislike-btn:hover:not(:disabled) {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .like-btn:active:not(:disabled), .dislike-btn:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+  
+  .like-btn:disabled, .dislike-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .no-more-profiles {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #666;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .version-text {
+    color: #000000;
+    font-weight: bold;
+  }

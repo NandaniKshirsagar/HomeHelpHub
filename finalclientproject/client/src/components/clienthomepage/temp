@@ -1,0 +1,41 @@
+
+
+// Services List
+const services = [
+    {
+      name: "Electricians",
+      description: "Professional electrical services",
+      image: "https://5.imimg.com/data5/SELLER/Default/2023/8/332297137/MG/MO/VY/41045831/home-electrical-repair-maintenance-1000x1000.webp",
+      route: "/electriciansearch",
+    },
+    {
+      name: "Plumbers",
+      description: "Expert plumbing solutions",
+      image: "https://c7.alamy.com/comp/HPK118/plumber-doing-maintenance-jobs-for-water-and-heating-systems-HPK118.jpg",
+      route: "/plumbersearch",
+    },
+    {
+      name: "Maids",
+      description: "Professional cleaning services",
+      image: "https://nepalcleaningsolution.com/wp-content/uploads/2023/01/about-us-1000x675.jpg",
+      route: "/maidsearch",
+    },
+    {
+      name: "Carpenters",
+      description: "Expert woodwork & repairs",
+      image: "https://images.unsplash.com/photo-1610264146566-c233419fb1c7?w=500&h=500",
+      route: "/carpentersearch",
+    },
+    {
+      name: "Painters",
+      description: "Quality painting services",
+      image: "https://thumbs.dreamstime.com/z/professional-house-painter-work-painting-wall-caucasian-house-painter-worker-white-work-overalls-roller-139299830.jpg",
+      route: "/paintersearch",
+    },
+    {
+      name: "Home Tutors",
+      description: "Personalized Learning",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5AcAIRCYFLm4SLR-ywgA_wKApuAD-NTI80Q&s",
+      route: "/hometutorsearch",
+    },
+  ];

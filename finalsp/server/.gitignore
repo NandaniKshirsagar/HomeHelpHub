@@ -1,0 +1,5 @@
+.env
+index.js
+
+/node_modules
+/config

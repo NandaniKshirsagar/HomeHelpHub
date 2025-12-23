@@ -1,0 +1,174 @@
+/* Mobile-first approach */
+.location-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background: transparent;
+  }
+  
+  .location-box {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 16px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin-top: -50px;
+    height: 200px;
+  }
+  
+  .location-header h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .location-header p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 4px;
+  }
+  
+  .location-description {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 12px 0;
+  }
+  
+  .location-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  .deny-button,
+  .allow-button {
+    width: 48%;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 8px;
+  }
+  
+  .deny-button {
+    background: #fff;
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+  }
+  
+  .allow-button {
+    background: #1976d2;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .allow-button i {
+    margin-right: 8px;
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 600px) {
+    .location-box {
+      padding: 24px;
+    }
+  
+    .location-header h2 {
+      font-size: 1.5rem;
+    }
+  
+    .location-header p {
+      font-size: 1rem;
+    }
+  
+    .location-description {
+      font-size: 0.95rem;
+    }
+  
+    .deny-button,
+    .allow-button {
+      height: 45px;
+      font-size: 1rem;
+    }
+  }
+
+  .location-message {
+    margin-top: 12px;
+    font-size: 1.2rem;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Add these to your existing CSS */
+
+/* Loading state for buttons */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Smooth transitions */
+.location-box {
+  transition: all 0.3s ease;
+}
+
+/* Button hover effects */
+.deny-button:hover:not(:disabled) {
+  background: #ffebee;
+  border-color: #b71c1c;
+}
+
+.allow-button:hover:not(:disabled) {
+  background: #1565c0;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+}
+
+.allow-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Success and error message styling */
+.message-success {
+  color: #2e7d32 !important;
+  background: #e8f5e9;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #c8e6c9;
+}
+
+.message-error {
+  color: #d32f2f !important;
+  background: #ffebee;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ffcdd2;
+}
+
+/* Small screen adjustments */
+@media (max-width: 360px) {
+  .location-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .deny-button,
+  .allow-button {
+    width: 100%;
+  }
+}
+
+/* Animation for message */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.location-message {
+  animation: fadeIn 0.3s ease;
+}

@@ -1,0 +1,233 @@
+/* Background with gradient */
+.auth-background {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #f4e3d7, #f0d9c6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered Auth Card */
+.auth-container {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* App Title */
+.app-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Email Input */
+.input-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.email-input {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.email-input:focus {
+  border-color: #6a11cb;
+}
+
+/* Continue Button */
+.continue-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  background: #ccc;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+}
+
+.continue-button.enabled {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  cursor: pointer;
+}
+
+.continue-button.enabled:hover {
+  opacity: 0.9;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #666;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+  margin: 0 10px;
+}
+
+/* Updated Google Button - Now using SVG icon from JSX */
+.login-with-google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+  background-color: #4285F4;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  gap: 10px;
+}
+
+.login-with-google-btn:hover {
+  background-color: #357ae8;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+}
+
+.login-with-google-btn:active {
+  background-color: #3367d6;
+}
+
+.login-with-google-btn:focus {
+  outline: none;
+  box-shadow: 
+    0 -1px 0 rgba(0, 0, 0, .04),
+    0 2px 4px rgba(0, 0, 0, .25),
+    0 0 0 3px rgba(66, 133, 244, 0.3);
+}
+
+.login-with-google-btn:disabled {
+  background-color: #a0c2f8;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+  cursor: not-allowed;
+}
+
+/* Google Icon inside the button */
+.google-icon {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 2px;
+  padding: 2px;
+}
+
+/* Social buttons container */
+.social-buttons {
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* OTP Card */
+.otp-card {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.otp-input {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.otp-input:focus {
+  border-color: #6a11cb;
+}
+
+.otp-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: none;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.otp-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.otp-button:hover:enabled {
+  opacity: 0.9;
+}
+
+/* Terms Text */
+.terms-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 20px;
+}
+
+.terms-text a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+.terms-text a:hover {
+  text-decoration: underline;
+}
+
+/* Custom Notification */
+.custom-notification {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

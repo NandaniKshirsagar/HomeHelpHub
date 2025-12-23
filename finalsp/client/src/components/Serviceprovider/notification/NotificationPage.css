@@ -1,0 +1,183 @@
+/* Base Styles */
+.notification-page {
+    background-color: var(--primary-background);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .notification-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--secondary-background);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+  }
+  
+  /* Header Styles */
+  .notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--primary-text);
+  }
+  
+  .back-button .material-icons {
+    font-size: 24px;
+  }
+  
+  .notification-header h2 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.25rem;
+    margin: 0;
+    letter-spacing: 0;
+  }
+  
+  .notification-count {
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--info);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+  }
+  
+  /* Notification List */
+  .notification-list {
+    margin-bottom: 16px;
+  }
+  
+  .notification-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background-color: var(--alternate);
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .notification-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .notification-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .notification-icon.primary {
+    background-color: rgba(75, 57, 239, 0.1);
+    color: var(--primary);
+  }
+  
+  .notification-icon.secondary {
+    background-color: rgba(57, 210, 192, 0.1);
+    color: var(--secondary);
+  }
+  
+  .notification-icon.tertiary {
+    background-color: rgba(255, 149, 0, 0.1);
+    color: var(--tertiary);
+  }
+  
+  .notification-icon .material-icons {
+    font-size: 24px;
+  }
+  
+  .notification-content {
+    flex-grow: 1;
+  }
+  
+  .notification-content h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+  }
+  
+  .notification-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+    margin: 0 0 4px 0;
+  }
+  
+  .notification-time {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: var(--secondary-text);
+  }
+  
+  /* Action Buttons */
+  .notification-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .primary-button, .secondary-button {
+    width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .primary-button {
+    background-color: var(--primary);
+    color: var(--info);
+    border: none;
+  }
+  
+  .secondary-button {
+    background-color: var(--secondary-background);
+    color: var(--primary-text);
+    border: 1px solid var(--alternate);
+  }
+  
+  /* CSS Variables */
+  :root {
+    --primary: #4B39EF;
+    --secondary: #39D2C0;
+    --tertiary: #FF9500;
+    --info: #FFFFFF;
+    --primary-text: #000000;
+    --secondary-text: #8E8E93;
+    --primary-background: #F2F2F7;
+    --secondary-background: #FFFFFF;
+    --alternate: #E5E5EA;
+  }

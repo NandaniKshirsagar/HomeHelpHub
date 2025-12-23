@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: 'Readex Pro', sans-serif;
+  background: linear-gradient(135deg, #f4e3d7, #f0d9c6); /* Light nude gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.first-page-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(''); /* Add your image URL here */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  z-index: 0;
+  opacity: 0.8; /* Add opacity to make text more visible */
+}
+
+.content-home {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px;
+  box-sizing: border-box;
+}
+
+.headerfirst {
+  width: auto;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #4a3f35; /* Darker nude text color for contrast */
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Soft white shadow for highlight */
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+}
+
+.subtitle p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #5a4a3a; /* Darker nude text color for contrast */
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Soft white shadow for highlight */
+}
+
+.description p {
+  font-size: 16px;
+  color: #5a4a3a; /* Darker nude text color for contrast */
+  margin: 16px 0 0;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Soft white shadow for highlight */
+}
+
+.get-started-button {
+  width: 200px; /* Increased button width */
+  height: 60px; /* Increased button height */
+  padding: 8px;
+  background-color: #a67c52; /* Nude button color */
+  color: white;
+  border: none;
+  border-radius: 30px; /* Increased border radius */
+  font-size: 18px; /* Increased font size */
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+.get-started-button:hover {
+  background-color: #8c6b4a; /* Darker nude on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.85s ease-in-out, moveIn 0.6s ease-in-out 0.93s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.06;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes moveIn {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.tint-in {
+  animation: tintIn 0.6s ease-in;
+}
+
+@keyframes tintIn {
+  from {
+    color: transparent;
+  }
+  to {
+    color: black;
+  }
+}

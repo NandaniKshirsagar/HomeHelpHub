@@ -1,0 +1,141 @@
+/* General Styles */
+.electrician-container {
+  width: 100vw;
+  height: 110vh;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #14181b;
+  background: white;
+  border-bottom: 1px solid #e0e3e7;
+  width: 100%;
+}
+
+.back-button {
+  border: none;
+  background: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #14181b;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #f1f4f8;
+  background-color: #f1f4f8;
+  font-size: 16px;
+  display: block;
+  outline: none;
+}
+
+.search-bar::placeholder {
+  color: #9ca3af;
+}
+
+/* Electrician List */
+.electrician-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.electrician-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 12px;
+  border-bottom: 1px solid #e0e3e7;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.info {
+  flex-grow: 1;
+}
+
+.info h2 {
+  font-size: 16px;
+  margin: 0;
+  color: #14181b;
+}
+
+.info p {
+  font-size: 14px;
+  color: #57636c;
+  margin: 4px 0;
+}
+
+/* Rounded Arrow Button */
+.arrow-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f1f4f8;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-button:hover {
+  background-color: #e0e3e7;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  color: #14181b;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .header {
+    font-size: 26px;
+  }
+
+  .search-bar {
+    font-size: 18px;
+  }
+
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+
+  .info h2 {
+    font-size: 18px;
+  }
+
+  .info p {
+    font-size: 16px;
+  }
+}

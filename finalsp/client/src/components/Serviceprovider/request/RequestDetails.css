@@ -1,0 +1,154 @@
+/* Base Styles */
+.request-details {
+  background-color: var(--primary-background);
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+/* App Bar */
+.app-bar {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--secondary-background);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  left: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-text);
+}
+
+/* App Title */
+.app-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-text);
+  text-align: center;
+}
+
+/* Card Styles */
+.card {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--secondary-background);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Request Summary */
+.request-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.request-date {
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+}
+
+/* Problem Description */
+.description-text,
+.notes-list {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.notes-title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* User Info */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.email-input {
+  width: 80%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--secondary-text);
+  text-align: center;
+}
+
+/* Schedule */
+.schedule-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px;
+  background-color: var(--primary-background);
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+/* Location */
+.location-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px;
+  background-color: var(--primary-background);
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .request-details {
+    padding: 12px;
+  }
+
+
+
+  .email-input {
+    width: 90%;
+  }
+
+  .app-bar {
+    padding: 12px;
+  }
+
+  .back-button {
+    font-size: 1.5rem;
+    left: 12px;
+  }
+}
